@@ -26,3 +26,21 @@ animalCardButton.classList.replace("btn-primary", "btn-success");
 cards.forEach((card, position) => {
   card.style.order = itemsOrder[position];
 });
+
+/* LIST */
+
+const list = document.querySelector(".list-group");
+list.firstElementChild.classList.remove("active");
+
+function createNewListElement(parent, text, isActive) {
+  const newItem = document.createElement("li");
+  newItem.classList.add("list-group-item");
+  newItem.appendChild(document.createTextNode(text));
+
+  isActive && newItem.classList.add("active");
+
+  parent.appendChild(newItem);
+}
+
+createNewListElement(list, "Quarto Item", true);
+createNewListElement(list, "Quinto Item");
