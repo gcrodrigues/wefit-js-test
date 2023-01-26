@@ -42,5 +42,5 @@ function createNewListElement(parent, text, isActive) {
   parent.appendChild(newItem);
 }
 
-createNewListElement(list, "Quarto Item", true);
-createNewListElement(list, "Quinto Item");
+createNewListElement(list, "Quarto item", true);
+createNewListElement(list, "Quinto item");
